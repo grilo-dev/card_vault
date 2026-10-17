@@ -1,0 +1,20 @@
+{
+  "name": "card-vault",
+  "version": "2.0.0",
+  "description": "Coleção de Magic: The Gathering com preços Cardmarket",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "app.cardvault",
+    "productName": "Card Vault",
+    "files": ["main.js", "preload.js", "core.js", "renderer/**/*"],
+    "mac": { "category": "public.app-category.utilities", "target": ["dmg"] }
+  }
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' file: data:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card Vault</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <div class="brand drag">
+        <div class="logo"></div>
+        <span>Card Vault</span>
+      </div>
+      <nav id="nav"><div class="nav-ind"></div></nav>
+      <div class="side-bottom">
+        <div id="priceDate" class="muted small"></div>
+        <button id="btnRefresh" class="btn primary wide"></button>
+        <button id="btnImport" class="btn wide"></button>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header class="topbar drag">
+        <h1 id="viewTitle"></h1>
+        <div id="topActions" class="nodrag"></div>
+      </header>
+      <section id="view-summary" class="view"><div class="content"></div></section>
+      <section id="view-collection" class="view"><div class="content"></div></section>
+      <section id="view-movers" class="view"><div class="content"></div></section>
+      <section id="view-top" class="view"><div class="content"></div></section>
+      <section id="view-settings" class="view"><div class="content"></div></section>
+    </main>
+
+    <aside id="drawer" aria-hidden="true"></aside>
+    <div id="scrim"></div>
+    <div id="jobcard" class="hidden">
+      <div class="job-row"><div class="spinner"></div><div id="jobText">A trabalhar…</div></div>
+      <div class="progress"><div id="jobBar" class="progress-fill indeterminate"></div></div>
+      <button id="jobCancel" class="btn small">Cancelar</button>
+    </div>
+    <div id="toasts"></div>
+    <div id="modal-root"></div>
+    <div id="dropzone"><div><b>Larga o CSV aqui</b><span>Exportação da TCGplayer</span></div></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
